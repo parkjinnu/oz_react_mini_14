@@ -9,7 +9,7 @@ console.log(movies);
 
       <div className="grid grid-cols-5 gap-6 justify-items-center"
       >
-        {movies.length !== - &&
+        {movies.length !== - && ''
         movies.results.map((movie, index) => (
           <MovieCard key={index} movie={movie} />
         ))}
