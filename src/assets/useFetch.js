@@ -25,13 +25,3 @@ const useFatch = () => {
    };
 
    export default useFatch;
-
-
-
-
-
-
-
-
-
-}
