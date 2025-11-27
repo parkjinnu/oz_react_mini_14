@@ -1,10 +1,13 @@
+import { useParams } from "react-router-dom";
 import movie from "./movieDetailData.json";
 
 const MovieDetail = () => {
+  const { movie_id } = useParams();
+  console.log(movie_id)
+ 
+ 
   return (
     <div className="max-w-5xl mx-auto p-6 grid grid-cols-3 gap-6">
-      
-     
       <div className="col-span-1">
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
