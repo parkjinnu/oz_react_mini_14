@@ -1,17 +1,21 @@
 import { useParams } from "react-router-dom";
 import movie from "./movieDetailData.json";
+import { useDetailFetch } from "./useFetch";
 
 const MovieDetail = () => {
   const { movie_id } = useParams();
-  console.log(movie_id)
+  const { movies } = useDetailFetch(movie_id)
+  if (!movies movies.length === 0) 
+  }
+
  
  
   return (
     <div className="max-w-5xl mx-auto p-6 grid grid-cols-3 gap-6">
       <div className="col-span-1">
         <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={movie.title}
+          src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}
+          alt={movies.title}
           className="w-full h-auto rounded shadow-lg"
         />
       </div>
@@ -22,10 +26,10 @@ const MovieDetail = () => {
        
         <div className="flex gap-4">
           <div className="flex-1 bg-teal-800 text-white p-4 text-center rounded">
-            <h2 className="text-xl font-bold">{movie.title}</h2>
+            <h2 className="text-xl font-bold">{movies.title}</h2>
           </div>
           <div className="w-32 bg-teal-800 text-white p-4 text-center rounded">
-            ⭐ {movie.vote_average}
+            ⭐ {movies.vote_average}
           </div>
         </div>
 
@@ -36,7 +40,7 @@ const MovieDetail = () => {
 
         
         <div className="bg-teal-800 text-white p-6 rounded text-center">
-          {movie.overview}
+          {movies.overview}
         </div>
       </div>
     </div>

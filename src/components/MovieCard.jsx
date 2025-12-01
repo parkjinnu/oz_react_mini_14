@@ -6,7 +6,7 @@ const MovieCard = ({ movie }) => {
   return (
     <div
       className="p-4 bg-gray-800 rounded cursor-pointer"
-      onClick={() => navigate("/details")}
+      onClick={() => navigate(`/details/${movie.id}`)}
     >
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
