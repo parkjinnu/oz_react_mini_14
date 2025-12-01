@@ -6,7 +6,7 @@ const useFatch = () => {
     method: "GET",
     headers: {
         accept: "application.json",
-        Authozization:
+        Authorization:
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTdmYjZjMTY0YWNmMmRkNDc2MGEyODM0NzY5MTgxZSIsIm5iZiI6MTc2MzUzMDg0Mi41MDcsInN1YiI6IjY5MWQ1ODVhYjFlOTEyNWRkY2ZjMWUxMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.r8b0Jb0VOLjnsLuAnmkYrur0Rn62wYRQC3lsNxZ3iQU"
         },
     };
@@ -24,4 +24,4 @@ const useFatch = () => {
     return { movies };
    };
 
-   export default useFatch;
+   export default useFetch;

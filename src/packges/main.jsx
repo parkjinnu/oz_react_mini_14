@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 import App from "./App";
-import MovieDetail from "./assets/MovieDetail";
+import MovieDetail from "../assets/MovieDetail";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
